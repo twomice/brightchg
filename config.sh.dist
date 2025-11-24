@@ -1,0 +1,18 @@
+# Copy this file to config.sh and modify per comments.
+
+# Directory under /sys/class/backlight representing the relevant backlight device.
+# This directory should already contain files named `brightness` and `max_brightness`.
+# See README for more about determining the relevant device.
+DEVICE=""
+
+# Integer representing the percentage change in brightness for each step.
+# E.g. "5" means "increment in steps of 5%".
+# If not set, a value of "5" is used.
+INCREMENT_PERCENT="5"
+
+# Integer representing the minimum brightness as a percent of max
+# E.g. "2" means "never go below 2% brightness".
+# If not set, a value of "1" is used.
+# NOTE: This script will never take you below 1% brightness, regardless of this
+# setting.
+MIN_PERCENT="1"
